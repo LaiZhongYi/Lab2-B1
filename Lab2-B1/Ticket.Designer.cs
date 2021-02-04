@@ -31,7 +31,7 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.pnBody = new System.Windows.Forms.Panel();
             this.lstSer = new System.Windows.Forms.CheckedListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstDes = new System.Windows.Forms.ListBox();
             this.lbDes = new System.Windows.Forms.Label();
             this.lstSource = new System.Windows.Forms.ListBox();
             this.lbSource = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             this.btnExit.Location = new System.Drawing.Point(390, 20);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(91, 49);
-            this.btnExit.TabIndex = 2;
+            this.btnExit.TabIndex = 11;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
@@ -96,23 +96,25 @@
             this.btnClear.Location = new System.Drawing.Point(293, 20);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(91, 49);
-            this.btnClear.TabIndex = 1;
+            this.btnClear.TabIndex = 10;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(12, 20);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(144, 49);
-            this.btnConfirm.TabIndex = 0;
+            this.btnConfirm.TabIndex = 9;
             this.btnConfirm.Text = "Save";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // pnBody
             // 
             this.pnBody.Controls.Add(this.lstSer);
-            this.pnBody.Controls.Add(this.listBox1);
+            this.pnBody.Controls.Add(this.lstDes);
             this.pnBody.Controls.Add(this.lbDes);
             this.pnBody.Controls.Add(this.lstSource);
             this.pnBody.Controls.Add(this.lbSource);
@@ -143,21 +145,21 @@
             this.lstSer.Location = new System.Drawing.Point(161, 439);
             this.lstSer.Name = "lstSer";
             this.lstSer.Size = new System.Drawing.Size(158, 38);
-            this.lstSer.TabIndex = 20;
+            this.lstSer.TabIndex = 8;
             // 
-            // listBox1
+            // lstDes
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Items.AddRange(new object[] {
+            this.lstDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDes.FormattingEnabled = true;
+            this.lstDes.ItemHeight = 16;
+            this.lstDes.Items.AddRange(new object[] {
             "Amsterdam",
             "Ha Noi",
             "Singapore"});
-            this.listBox1.Location = new System.Drawing.Point(161, 275);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(159, 52);
-            this.listBox1.TabIndex = 19;
+            this.lstDes.Location = new System.Drawing.Point(161, 275);
+            this.lstDes.Name = "lstDes";
+            this.lstDes.Size = new System.Drawing.Size(159, 52);
+            this.lstDes.TabIndex = 5;
             // 
             // lbDes
             // 
@@ -181,7 +183,7 @@
             this.lstSource.Location = new System.Drawing.Point(160, 207);
             this.lstSource.Name = "lstSource";
             this.lstSource.Size = new System.Drawing.Size(159, 52);
-            this.lstSource.TabIndex = 17;
+            this.lstSource.TabIndex = 4;
             // 
             // lbSource
             // 
@@ -197,10 +199,11 @@
             // 
             this.txtPassportNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassportNum.Location = new System.Drawing.Point(161, 145);
+            this.txtPassportNum.MaxLength = 10;
             this.txtPassportNum.Name = "txtPassportNum";
             this.txtPassportNum.Size = new System.Drawing.Size(159, 26);
-            this.txtPassportNum.TabIndex = 15;
-            this.txtPassportNum.TextChanged += new System.EventHandler(this.txtPassportNum_TextChanged);
+            this.txtPassportNum.TabIndex = 3;
+            this.txtPassportNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassportNum_KeyPress);
             // 
             // label1
             // 
@@ -218,7 +221,7 @@
             this.txtPasName.Location = new System.Drawing.Point(161, 80);
             this.txtPasName.Name = "txtPasName";
             this.txtPasName.Size = new System.Drawing.Size(273, 26);
-            this.txtPasName.TabIndex = 13;
+            this.txtPasName.TabIndex = 2;
             // 
             // dateJoin
             // 
@@ -228,7 +231,7 @@
             this.dateJoin.Location = new System.Drawing.Point(160, 342);
             this.dateJoin.Name = "dateJoin";
             this.dateJoin.Size = new System.Drawing.Size(159, 22);
-            this.dateJoin.TabIndex = 11;
+            this.dateJoin.TabIndex = 6;
             // 
             // cboClass
             // 
@@ -247,9 +250,11 @@
             // 
             this.txtTicketNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTicketNum.Location = new System.Drawing.Point(160, 22);
+            this.txtTicketNum.MaxLength = 10;
             this.txtTicketNum.Name = "txtTicketNum";
             this.txtTicketNum.Size = new System.Drawing.Size(159, 26);
-            this.txtTicketNum.TabIndex = 5;
+            this.txtTicketNum.TabIndex = 1;
+            this.txtTicketNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTicketNum_KeyPress);
             // 
             // lbSer
             // 
@@ -340,7 +345,7 @@
         private System.Windows.Forms.DateTimePicker dateJoin;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtPasName;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstDes;
         private System.Windows.Forms.Label lbDes;
         private System.Windows.Forms.ListBox lstSource;
         private System.Windows.Forms.Label lbSource;

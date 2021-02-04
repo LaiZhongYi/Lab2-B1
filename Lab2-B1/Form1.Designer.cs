@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.pnFooter = new System.Windows.Forms.Panel();
             this.lbHeader = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.pnFooter = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.pnBody = new System.Windows.Forms.Panel();
-            this.lbStudent = new System.Windows.Forms.Label();
-            this.lbBirth = new System.Windows.Forms.Label();
-            this.lbClass = new System.Windows.Forms.Label();
-            this.lbDiv = new System.Windows.Forms.Label();
-            this.lbHob = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtYear = new System.Windows.Forms.TextBox();
-            this.cboDiv = new System.Windows.Forms.ComboBox();
-            this.lstClass = new System.Windows.Forms.ListBox();
             this.lstHob = new System.Windows.Forms.CheckedListBox();
+            this.lstClass = new System.Windows.Forms.ListBox();
+            this.cboDiv = new System.Windows.Forms.ComboBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lbHob = new System.Windows.Forms.Label();
+            this.lbDiv = new System.Windows.Forms.Label();
+            this.lbClass = new System.Windows.Forms.Label();
+            this.lbBirth = new System.Windows.Forms.Label();
+            this.lbStudent = new System.Windows.Forms.Label();
             this.pnHeader.SuspendLayout();
             this.pnFooter.SuspendLayout();
             this.pnBody.SuspendLayout();
@@ -58,16 +58,6 @@
             this.pnHeader.Size = new System.Drawing.Size(493, 52);
             this.pnHeader.TabIndex = 0;
             // 
-            // pnFooter
-            // 
-            this.pnFooter.Controls.Add(this.btnClear);
-            this.pnFooter.Controls.Add(this.btnConfirm);
-            this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnFooter.Location = new System.Drawing.Point(0, 568);
-            this.pnFooter.Name = "pnFooter";
-            this.pnFooter.Size = new System.Drawing.Size(493, 100);
-            this.pnFooter.TabIndex = 1;
-            // 
             // lbHeader
             // 
             this.lbHeader.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,25 +69,35 @@
             this.lbHeader.Text = "Student\'s Class Details";
             this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnConfirm
+            // pnFooter
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(63, 20);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(175, 49);
-            this.btnConfirm.TabIndex = 0;
-            this.btnConfirm.Text = "Confirm Student Details";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.pnFooter.Controls.Add(this.btnClear);
+            this.pnFooter.Controls.Add(this.btnConfirm);
+            this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnFooter.Location = new System.Drawing.Point(0, 568);
+            this.pnFooter.Name = "pnFooter";
+            this.pnFooter.Size = new System.Drawing.Size(493, 100);
+            this.pnFooter.TabIndex = 1;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(288, 20);
+            this.btnClear.Location = new System.Drawing.Point(322, 20);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(143, 49);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(141, 20);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(175, 49);
+            this.btnConfirm.TabIndex = 0;
+            this.btnConfirm.Text = "Confirm Student Details";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // pnBody
             // 
@@ -117,86 +117,19 @@
             this.pnBody.Size = new System.Drawing.Size(493, 516);
             this.pnBody.TabIndex = 2;
             // 
-            // lbStudent
+            // lstHob
             // 
-            this.lbStudent.AutoSize = true;
-            this.lbStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStudent.Location = new System.Drawing.Point(12, 28);
-            this.lbStudent.Name = "lbStudent";
-            this.lbStudent.Size = new System.Drawing.Size(112, 20);
-            this.lbStudent.TabIndex = 0;
-            this.lbStudent.Text = "Student Name";
-            // 
-            // lbBirth
-            // 
-            this.lbBirth.AutoSize = true;
-            this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBirth.Location = new System.Drawing.Point(12, 83);
-            this.lbBirth.Name = "lbBirth";
-            this.lbBirth.Size = new System.Drawing.Size(101, 20);
-            this.lbBirth.TabIndex = 1;
-            this.lbBirth.Text = "Year Of Birth";
-            // 
-            // lbClass
-            // 
-            this.lbClass.AutoSize = true;
-            this.lbClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbClass.Location = new System.Drawing.Point(12, 139);
-            this.lbClass.Name = "lbClass";
-            this.lbClass.Size = new System.Drawing.Size(118, 20);
-            this.lbClass.TabIndex = 2;
-            this.lbClass.Text = "Standard/Class";
-            // 
-            // lbDiv
-            // 
-            this.lbDiv.AutoSize = true;
-            this.lbDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiv.Location = new System.Drawing.Point(12, 266);
-            this.lbDiv.Name = "lbDiv";
-            this.lbDiv.Size = new System.Drawing.Size(63, 20);
-            this.lbDiv.TabIndex = 3;
-            this.lbDiv.Text = "Division";
-            // 
-            // lbHob
-            // 
-            this.lbHob.AutoSize = true;
-            this.lbHob.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHob.Location = new System.Drawing.Point(12, 344);
-            this.lbHob.Name = "lbHob";
-            this.lbHob.Size = new System.Drawing.Size(68, 20);
-            this.lbHob.TabIndex = 4;
-            this.lbHob.Text = "Hobbies";
-            // 
-            // txtName
-            // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(141, 22);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(273, 26);
-            this.txtName.TabIndex = 5;
-            // 
-            // txtYear
-            // 
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear.Location = new System.Drawing.Point(141, 83);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(139, 26);
-            this.txtYear.TabIndex = 6;
-            // 
-            // cboDiv
-            // 
-            this.cboDiv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDiv.FormattingEnabled = true;
-            this.cboDiv.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D"});
-            this.cboDiv.Location = new System.Drawing.Point(141, 263);
-            this.cboDiv.Name = "cboDiv";
-            this.cboDiv.Size = new System.Drawing.Size(139, 28);
-            this.cboDiv.TabIndex = 7;
+            this.lstHob.FormattingEnabled = true;
+            this.lstHob.Items.AddRange(new object[] {
+            "Singing",
+            "Dancing",
+            "Swimming",
+            "Reading",
+            "Travelling"});
+            this.lstHob.Location = new System.Drawing.Point(141, 344);
+            this.lstHob.Name = "lstHob";
+            this.lstHob.Size = new System.Drawing.Size(139, 94);
+            this.lstHob.TabIndex = 9;
             // 
             // lstClass
             // 
@@ -217,19 +150,86 @@
             this.lstClass.Size = new System.Drawing.Size(139, 95);
             this.lstClass.TabIndex = 8;
             // 
-            // lstHob
+            // cboDiv
             // 
-            this.lstHob.FormattingEnabled = true;
-            this.lstHob.Items.AddRange(new object[] {
-            "Singing",
-            "Dancing",
-            "Swimming",
-            "Reading",
-            "Travelling"});
-            this.lstHob.Location = new System.Drawing.Point(141, 344);
-            this.lstHob.Name = "lstHob";
-            this.lstHob.Size = new System.Drawing.Size(139, 94);
-            this.lstHob.TabIndex = 9;
+            this.cboDiv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDiv.FormattingEnabled = true;
+            this.cboDiv.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.cboDiv.Location = new System.Drawing.Point(141, 263);
+            this.cboDiv.Name = "cboDiv";
+            this.cboDiv.Size = new System.Drawing.Size(139, 28);
+            this.cboDiv.TabIndex = 7;
+            // 
+            // txtYear
+            // 
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear.Location = new System.Drawing.Point(141, 83);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(139, 26);
+            this.txtYear.TabIndex = 6;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(141, 22);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(273, 26);
+            this.txtName.TabIndex = 5;
+            // 
+            // lbHob
+            // 
+            this.lbHob.AutoSize = true;
+            this.lbHob.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHob.Location = new System.Drawing.Point(12, 344);
+            this.lbHob.Name = "lbHob";
+            this.lbHob.Size = new System.Drawing.Size(68, 20);
+            this.lbHob.TabIndex = 4;
+            this.lbHob.Text = "Hobbies";
+            // 
+            // lbDiv
+            // 
+            this.lbDiv.AutoSize = true;
+            this.lbDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiv.Location = new System.Drawing.Point(12, 266);
+            this.lbDiv.Name = "lbDiv";
+            this.lbDiv.Size = new System.Drawing.Size(63, 20);
+            this.lbDiv.TabIndex = 3;
+            this.lbDiv.Text = "Division";
+            // 
+            // lbClass
+            // 
+            this.lbClass.AutoSize = true;
+            this.lbClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClass.Location = new System.Drawing.Point(12, 139);
+            this.lbClass.Name = "lbClass";
+            this.lbClass.Size = new System.Drawing.Size(118, 20);
+            this.lbClass.TabIndex = 2;
+            this.lbClass.Text = "Standard/Class";
+            // 
+            // lbBirth
+            // 
+            this.lbBirth.AutoSize = true;
+            this.lbBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBirth.Location = new System.Drawing.Point(12, 83);
+            this.lbBirth.Name = "lbBirth";
+            this.lbBirth.Size = new System.Drawing.Size(101, 20);
+            this.lbBirth.TabIndex = 1;
+            this.lbBirth.Text = "Year Of Birth";
+            // 
+            // lbStudent
+            // 
+            this.lbStudent.AutoSize = true;
+            this.lbStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStudent.Location = new System.Drawing.Point(12, 28);
+            this.lbStudent.Name = "lbStudent";
+            this.lbStudent.Size = new System.Drawing.Size(112, 20);
+            this.lbStudent.TabIndex = 0;
+            this.lbStudent.Text = "Student Name";
             // 
             // Form1
             // 

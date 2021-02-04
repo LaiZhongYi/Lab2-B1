@@ -31,6 +31,8 @@
             this.pnHeader = new System.Windows.Forms.Panel();
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnFooter = new System.Windows.Forms.Panel();
+            this.btnStudent = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.pnBody = new System.Windows.Forms.Panel();
@@ -44,8 +46,6 @@
             this.lbDate = new System.Windows.Forms.Label();
             this.lbEmpAddr = new System.Windows.Forms.Label();
             this.lbEmpName = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnStudent = new System.Windows.Forms.Button();
             this.pnHeader.SuspendLayout();
             this.pnFooter.SuspendLayout();
             this.pnBody.SuspendLayout();
@@ -83,9 +83,29 @@
             this.pnFooter.Size = new System.Drawing.Size(493, 100);
             this.pnFooter.TabIndex = 1;
             // 
+            // btnStudent
+            // 
+            this.btnStudent.Location = new System.Drawing.Point(196, 20);
+            this.btnStudent.Name = "btnStudent";
+            this.btnStudent.Size = new System.Drawing.Size(91, 49);
+            this.btnStudent.TabIndex = 13;
+            this.btnStudent.Text = "Student";
+            this.btnStudent.UseVisualStyleBackColor = true;
+            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(390, 20);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(91, 49);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(149, 20);
+            this.btnClear.Location = new System.Drawing.Point(293, 20);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(91, 49);
             this.btnClear.TabIndex = 1;
@@ -97,7 +117,7 @@
             // 
             this.btnConfirm.Location = new System.Drawing.Point(16, 20);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(91, 49);
+            this.btnConfirm.Size = new System.Drawing.Size(138, 49);
             this.btnConfirm.TabIndex = 0;
             this.btnConfirm.Text = "Save";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -138,11 +158,11 @@
             // dateJoin
             // 
             this.dateJoin.CustomFormat = "";
-            this.dateJoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateJoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateJoin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateJoin.Location = new System.Drawing.Point(160, 261);
             this.dateJoin.Name = "dateJoin";
-            this.dateJoin.Size = new System.Drawing.Size(120, 22);
+            this.dateJoin.Size = new System.Drawing.Size(139, 24);
             this.dateJoin.TabIndex = 11;
             // 
             // txtAddress
@@ -222,26 +242,6 @@
             this.lbEmpName.Size = new System.Drawing.Size(125, 20);
             this.lbEmpName.TabIndex = 0;
             this.lbEmpName.Text = "Employee Name";
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(390, 20);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(91, 49);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnStudent
-            // 
-            this.btnStudent.Location = new System.Drawing.Point(270, 20);
-            this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Size = new System.Drawing.Size(91, 49);
-            this.btnStudent.TabIndex = 13;
-            this.btnStudent.Text = "Student";
-            this.btnStudent.UseVisualStyleBackColor = true;
-            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
             // Employee
             // 
